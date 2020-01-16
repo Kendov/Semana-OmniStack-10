@@ -113,10 +113,8 @@ module.exports = {
             });
         
             
-            return res.json({message:"new user created"});
-        }else{
-            return res.json({message:"user already exist"});
         }
+        return res.json(dev);
     
     }
     

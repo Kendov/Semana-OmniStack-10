@@ -15,8 +15,8 @@ Esse projeto tem o objetivo de criar uma aplicação para desenvolvedores inspir
 
 
 ## Progresso
- * **Dia 2** - Backend  ✅
- * **Dia 3** - Web      ⬜️
- * **Dia 4** - Mobile   ⬜️
+ * **Backend**  ✅
+ * **Web**      ✅
+ * **Mobile**   ⬜️
  
 
