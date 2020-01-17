@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
 
-const pointSchema = new mongoose.Schema({
+const PointSchema = new mongoose.Schema({
     type:{
         type: String,
         enum: ['point'],
-        require:true,
+        required: true,
     },
-    coodinates:{
-        type:[Number],
-        require:true,
+    coordinates: {
+        type: [Number],
+        required: true,
     }
 });
 
-module.exports = pointSchema;
+module.exports = PointSchema;

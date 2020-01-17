@@ -1,5 +1,5 @@
 const mongoosee = require('mongoose');
-const pointSchema = require('./utils/pointSchema');
+const PointSchema = require('./utils/pointSchema');
 
 
 
@@ -10,7 +10,7 @@ const devSchema = new mongoosee.Schema({
     avatar_url: String,
     techs: [String],
     location: {
-        type: pointSchema,
+        type: PointSchema,
         index: '2dSphere'
     }
 

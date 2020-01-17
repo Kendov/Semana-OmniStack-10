@@ -4,26 +4,27 @@ const parseStringAsArray = require('../utils/parseStringAsArray');
 module.exports = {
     async index(req,res){
         const {latitude, longitude, techs}= req.query;
-
+        
         const techsArray = parseStringAsArray(techs);
+        console.log("serching", latitude, longitude, techsArray);
 
         const devs = await Dev.find({
             techs: {
-                $in: techsArray
+                $in: techsArray,
             },
-            location: {
-                $near: {
-                    $geometry:{
-                        type: 'Point',
-                        coodinates:[longitude, latitude]
-                    },
-                    $maxDistance: 10000
-                }
-            }
+            // location: {
+            //     $near: {
+            //         $geometry: {
+            //             type: 'Point',
+            //             coordinates: [longitude, latitude]
+            //         },
+            //         $maxDistance: 10000,
+            //     },
+            // },
         });
 
 
-        console.log(techsArray);
+        console.log(devs);
         return res.json(devs);
     }
 }
